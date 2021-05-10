@@ -1,0 +1,27 @@
+version: "3.9"
+services: 
+    tcp-01: 
+        build: .       
+        container_name: tcp-tst-01
+        ports:
+            - "1050"                      
+        image: "aiasonar.azurecr.io/load-tst:aia-tcp-node"  
+    tcp-02: 
+        build: .       
+        container_name: aia-tst-02
+        ports:
+            - "1050"                      
+        image: "aiasonar.azurecr.io/load-tst:aia-tcp-node"              
+    tcp-01: 
+        build: .       
+        container_name: aia-udp-01
+        ports:
+            - "1051"                      
+        image: "aiasonar.azurecr.io/load-tst:aia-udp-node"  
+    tcp-02: 
+        build: .       
+        container_name: aia-udp-02
+        ports:
+            - "1051"                      
+        image: "aiasonar.azurecr.io/load-tst:aia-udp-node"              
+    

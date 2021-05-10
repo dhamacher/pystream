@@ -1,0 +1,13 @@
+FROM python:3
+
+RUN mkdir /pystream
+RUN mkdir /pystream/config/
+
+ADD src/tcp-load-tst.py /pystream/
+ADD requirements.txt /pystream/
+
+RUN pip install -r /pystream/requirements.txt
+
+EXPOSE 1555
+
+CMD [ "python", "./pystream/tcp-load-tst.py"]

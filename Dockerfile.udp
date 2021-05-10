@@ -1,0 +1,12 @@
+FROM python:3
+
+RUN mkdir /pystream
+
+ADD src/udp-load-tst.py /pystream/
+ADD requirements.txt /pystream/
+
+RUN pip install -r /pystream/requirements.txt
+
+EXPOSE 1444/udp
+
+CMD [ "python", "./pystream/udp-load-tst.py"]

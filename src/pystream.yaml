@@ -1,0 +1,6 @@
+protocol: tcp
+eventhubConnectionString: 'Endpoint=sb://*********.servicebus.windows.net/;SharedAccessKeyName=*********;SharedAccessKey=*****....*****'
+eventHubName: tcp_hub
+bufferSize: 8096
+logLevel: 'INFO'
+host: "localhost"
